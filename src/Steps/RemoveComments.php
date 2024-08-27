@@ -28,6 +28,9 @@ class RemoveComments implements Step
      */
     public function apply($html)
     {
+        if(!isset($html) {
+           return '';
+        }
         $result = preg_replace('/<!--(?!<!)[^\[>].*?-->/s', '', $html);
         return $result;
     }
